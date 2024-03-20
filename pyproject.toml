@@ -12,6 +12,8 @@ dependencies = [
     "ipykernel>=6.29.3",
     "folium>=0.16.0",
     "matplotlib>=3.8.3",
+    "httpx>=0.27.0",
+    "plotly>=5.20.0",
 ]
 requires-python = "==3.11.*"
 readme = "README.md"

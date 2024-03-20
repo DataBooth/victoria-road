@@ -8,6 +8,8 @@ https://opendata.transport.nsw.gov.au/dataset/ef2b0bd2-db1e-48f3-9ea1-2bb9e6bc65
 
 ### NSW Open Data
 
+https://opendata.transport.nsw.gov.au/dataset/ef2b0bd2-db1e-48f3-9ea1-2bb9e6bc6504/resource/bca06c7e-30be-4a90-bc8b-c67428c0823a/download/road_traffic_counts_hourly_permanent.zip
+
 https://opendata.transport.nsw.gov.au/dataset/nsw-roads-traffic-volume-counts-api
 
 #### Station Reference data
