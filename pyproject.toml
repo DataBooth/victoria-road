@@ -1,0 +1,27 @@
+[project]
+name = "victoria-road"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "'", email = "michael@databooth.com.au"},
+]
+dependencies = [
+    "notebook>=7.1.2",
+    "pandas>=2.2.1",
+    "duckdb>=0.10.1",
+    "ipykernel>=6.29.3",
+    "folium>=0.16.0",
+    "matplotlib>=3.8.3",
+]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "DataBooth"}
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.dev-dependencies]
+lint = [
+    "black[jupyter]>=24.3.0",
+]
