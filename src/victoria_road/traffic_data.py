@@ -134,14 +134,17 @@ class TrafficDataApp:
         return "Plotting not implemented yet."
 
     @cache
-    def create_map(self, distance=10):
+    def create_map(self, station, distance=10):
         # Assuming df has 'wgs84_latitude', 'wgs84_longitude', 'station_id', 'station_key', and 'full_name' columns
         self.calc_distances_to_stations()
         m = folium.Map()
         fg = folium.FeatureGroup()  # Create a feature group
-        for row in self.station_df[self.station_df["distance_to_user"] <= distance].itertuples():
+        station_df = self.station_df.copy()
+        if station != "ALL":
+            station_df = station_df[station_df["full_name"] == station]
+        for row in station_df[station_df["distance_to_user"] <= distance].itertuples():
             popup_text = (
-                f"Station ID (Key): {row.station_id} ({row.station_key})<br>Full Name: {row.full_name}"
+                f"Station ID (Key): {row.station_id} ({row.station_key})<br>Full Name: {row.road_name}"
             )
             marker = folium.Marker(
                 [row.wgs84_latitude, row.wgs84_longitude],

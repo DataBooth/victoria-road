@@ -1,0 +1,8 @@
+[app]
+CSV_FILES_PATH = "data/road_traffic_counts_hourly_permanent/"
+DOWNLOAD_THRESHOLD_DAYS = 7
+HOURLY_COUNTS_ZIP = "https://opendata.transport.nsw.gov.au/dataset/ef2b0bd2-db1e-48f3-9ea1-2bb9e6bc6504/resource/bca06c7e-30be-4a90-bc8b-c67428c0823a/download/road_traffic_counts_hourly_permanent.zip"
+STATION_REFERENCE = "https://opendata.transport.nsw.gov.au/dataset/ef2b0bd2-db1e-48f3-9ea1-2bb9e6bc6504/resource/c65ad7b4-0257-4cc6-953e-5299ac8d27ba/download/road_traffic_counts_station_reference.csv"
+TABLE_NAME_COUNTS = "road_traffic_counts"
+TABLE_NAME_STATIONS = "station_reference"
+TRANSPORT_DOC_URL = "https://opendata.transport.nsw.gov.au/dataset/ef2b0bd2-db1e-48f3-9ea1-2bb9e6bc6504/resource/13d061b1-1606-49b5-b182-d36ce0801f14/download/rms-dataset-documentation-nsw-traffic-volume-counts_0.pdf"

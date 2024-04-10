@@ -10,7 +10,12 @@ st.sidebar.link_button(
 
 app = TrafficDataApp()
 
+app.load_data()
+
 st.sidebar.title("Traffic Data App")
+
+station = st.sidebar.selectbox(label="Station (`full_name`)", options=["ALL"] + sorted(app.station_df["full_name"].unique()))
+
 update_data = st.sidebar.checkbox("Update data", value=False)
 
 if update_data:
@@ -21,7 +26,7 @@ if update_data:
 distance = st.sidebar.slider("Station cutoff distance (km)", min_value=2, max_value=20, value=5)
 
 
-app.load_data()
+
 
 tab_stats, tab_plots, tab_data, tab_schema, tab_map = st.tabs(
     ["Stats", "Plots", "Data", "Schema", "Map"]
@@ -42,5 +47,5 @@ with tab_schema:
     app.get_schema()
 
 with tab_map:
-    folium_map = app.create_map(distance)
+    folium_map = app.create_map(station, distance)
     st_folium(folium_map, width=725, height=500)
